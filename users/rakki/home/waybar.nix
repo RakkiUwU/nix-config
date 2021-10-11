@@ -1,6 +1,6 @@
 { pkgs, config, ... }:
 let
-  minicava = "${pkgs.minicava}/bin/minicava";
+  minicava = "${pkgs.nur.repos.misterio.minicava}/bin/minicava";
 in {
   programs.waybar = let colorscheme = config.colorscheme; in {
     enable = true;

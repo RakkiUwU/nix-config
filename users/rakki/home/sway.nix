@@ -14,7 +14,7 @@ let
   swaylock = "${pkgs.swaylock-effects}/bin/swaylock";
   swayidle = "${pkgs.swayidle}/bin/swayidle";
   mako = "${pkgs.mako}/bin/mako";
-  swayfader = "${pkgs.swayfader}/bin/swayfader";
+  swayfader = "${pkgs.nur.repos.misterio.swayfader}/bin/swayfader";
   wofi = "${pkgs.wofi}/bin/wofi";
 in rec {
   home.packages = with pkgs; [ wl-clipboard wf-recorder slurp ];

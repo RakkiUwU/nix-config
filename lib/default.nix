@@ -10,7 +10,7 @@
         impermanence = inputs.impermanence;
         nixpkgs = inputs.nixpkgs;
         nix-colors = inputs.nix-colors;
-        misterio-nur = inputs.misterio-nur;
+        nur = inputs.nur;
       };
       # Import host config
       modules = [ ../hosts/${host} ../overlays ]

@@ -130,7 +130,7 @@
     flameshot
     pavucontrol
     pulseeffects-legacy
-    comma
+    nur.repos.misterio.comma
     kdeconnect
 
     # Fontes

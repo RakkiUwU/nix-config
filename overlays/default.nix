@@ -1,6 +1,7 @@
 { ... }: {
   nixpkgs.overlays = [
     (final: prev: {
+      /*
       # wlroots fork with nvidia proprietary driver support
       wlroots = prev.wlroots.overrideAttrs (oldAttrs: rec {
         src = prev.fetchFromGitHub {
@@ -10,6 +11,7 @@
           sha256 = "sha256-0DhREZcCbu5lDbaQrNFQwkcw0AgZdYPEfo/U2E6XQK8=";
         };
       });
+      */
     })
   ];
 }

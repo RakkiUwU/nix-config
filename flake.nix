@@ -2,10 +2,10 @@
   description = "My NixOS configuration";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs?rev=f048b1401f8246c4a8841d15190ebe7c8f15941a";
     hardware.url = "github:nixos/nixos-hardware";
     nix-colors.url = "github:misterio77/nix-colors";
-    misterio-nur.url = "github:misterio77/nur-packages";
+    nur.url = "github:nix-community/NUR";
 
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";

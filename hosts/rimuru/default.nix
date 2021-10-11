@@ -1,4 +1,4 @@
-{ config, pkgs, nixpkgs, hardware, impermanence, nix-colors, misterio-nur, ... }: {
+{ config, pkgs, nixpkgs, hardware, impermanence, nix-colors, nur, ... }: {
   imports = [
     # Importar configuração gerada para os discos
     ./hardware-configuration.nix
@@ -15,7 +15,7 @@
 
 fileSystems."/data".neededForBoot = true;
 
-nixpkgs.overlays = [ misterio-nur.overlay ];
+nixpkgs.overlays = [ nur.overlay ];
 
   # Persistir algumas pastas do sistema
   # Pra os timers do systemd e logs funcionarem certo entre reboots
