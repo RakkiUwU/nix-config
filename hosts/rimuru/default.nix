@@ -7,7 +7,7 @@
     hardware.nixosModules.common-cpu-intel
 
     # Importar config para gpu da nvidia
-    #hardware.nixosModules.common-gpu-nvidia
+    hardware.nixosModules.common-gpu-nvidia
 
     # Importar impermanence (programinha que monta as pastas persistidas)
     impermanence.nixosModules.impermanence
@@ -147,6 +147,11 @@ nixpkgs.overlays = [ nur.overlay ];
     # PulseAudio
     pulseaudio.enable = true;
     # Desabilitar offload PRIME
-    nvidia.prime.offload.enable = false;
+    nvidia = {
+      prime.offload.enable = false;
+      modesetting.enable = true;
+      powerManagement.enable = false;
+      package = config.boot.kernelPackages.nvidiaPackages.beta;
+    };
   };
 }
